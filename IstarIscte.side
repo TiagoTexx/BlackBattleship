@@ -1,0 +1,74 @@
+{
+  "id": "38ae3066-e824-4e59-8cf4-c450bef3c2ae",
+  "version": "2.0",
+  "name": "IstarIscte",
+  "url": "https://istar.iscte-iul.pt",
+  "tests": [{
+    "id": "3c26fcb0-3d0b-4416-b4d9-e49a56e2fd29",
+    "name": "UserStoryTest1",
+    "commands": [{
+      "id": "7eebdbe4-6307-4f2e-ad1b-6498c56eb24b",
+      "comment": "open browser",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "da2cddba-a79d-4203-8a5b-bd47a29f139f",
+      "comment": "set windows size",
+      "command": "setWindowSize",
+      "target": "1282x693",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5a835aa6-d966-4f4a-94db-78ae2b938447",
+      "comment": "click menu \"People\"",
+      "command": "click",
+      "target": "css=#menu-item-51120 > .menu-item-link",
+      "targets": [
+        ["css=#menu-item-51120 > .menu-item-link", "css:finder"],
+        ["xpath=//a[contains(text(),'People')]", "xpath:link"],
+        ["xpath=//li[@id='menu-item-51120']/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://istar.iscte-iul.pt/people/')]", "xpath:href"],
+        ["xpath=//li[8]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "05c7e722-2809-45d6-89c5-8ab267c145a7",
+      "comment": "click José Reis",
+      "command": "click",
+      "target": "css=#box-11 .mk-employee-item:nth-child(40) .team-member-name > .team-member-name",
+      "targets": [
+        ["css=#box-11 .mk-employee-item:nth-child(40) .team-member-name > .team-member-name", "css:finder"],
+        ["xpath=//div[@id='box-11']/ul/li[34]/div[2]/div[2]/a/span", "xpath:idRelative"],
+        ["xpath=//div[7]/ul/li[34]/div[2]/div[2]/a/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a7cc4fcf-b65d-466d-98f5-f432e15f7f65",
+      "comment": "mostrar página Ensino e Orientações",
+      "command": "click",
+      "target": "linkText=Ensino e Orientações",
+      "targets": [
+        ["linkText=Ensino e Orientações", "linkText"],
+        ["css=.nav-tabs > li:nth-child(2) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Ensino e Orientações')]", "xpath:link"],
+        ["xpath=//div[@id='skip_main_content']/div/div/div[2]/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/authors/jose-vicente-pereira-dos-reis/teaching')]", "xpath:href"],
+        ["xpath=//div/div/div[2]/ul/li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Ensino e Orientações')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "c5185681-f24d-4434-9992-e3fa3ab18b1b",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["3c26fcb0-3d0b-4416-b4d9-e49a56e2fd29"]
+  }],
+  "urls": ["https://istar.iscte-iul.pt/"],
+  "plugins": []
+}
